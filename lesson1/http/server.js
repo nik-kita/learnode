@@ -3,18 +3,21 @@ const port = 9898;
 
 const server = http.createServer((req, res) => {
     
-  
-    res.write("I'm hear you! How are you?");
+    res.writeHead(200, {'Content-Type': 'text/plain'})
+    res.write("Hello from server!");
     res.end();
 }).listen(port);
+console.log("Server is running...");
+
 
 
 server.on('request', req => {
-    console.log("request!");
+    console.log("We have request!");
+    server.close();
+    console.log("...server is closing.")
 });
 
 server.on('data', data => {
-    console.log("data!");
+    console.log("We have data!");
 })
-
 

@@ -1,9 +1,13 @@
 const http = require('http');
-
-const options = {
+options = {
     port: 9898,
-};
+}
 
-http.request("http://127.0.0.1:9898", res => {
-    console.log(res);
+http.request(options, res => {
+    dataBuffer = '';
+    res.on('data', data => {
+        console.log(data);
+        dataBuffer += data;
+    });
+    res.on('end', () => console.log(dataBuffer))
 }).end()
