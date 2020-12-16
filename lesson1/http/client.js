@@ -1,6 +1,8 @@
 const http = require('http');
 options = {
     port: 9898,
+    hostname: "localhost",
+    method: "GET"
 }
 
 http.request(options, res => {

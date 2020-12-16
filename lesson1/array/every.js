@@ -1,4 +1,3 @@
-
 const arr = [1, 2, 3, 4, 5, 6];
 
 // all elements are greater than 4
