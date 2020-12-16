@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const arr = [1, 2, 3, 4, 5, 6];
 
 // item(s) greater than 3

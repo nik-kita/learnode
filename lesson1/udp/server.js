@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const dgram = require('dgram');
 
 // creating a udp server
@@ -20,7 +21,7 @@ server.on('listening', () => {
     const address = server.address();
     console.log(`server listening ${address.address}:${address.port}`);
 
-server.on('end', () => server.close())
+    server.on('end', () => server.close());
 });
 
 // Prints: server listening 0.0.0.0:41234

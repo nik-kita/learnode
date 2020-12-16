@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 // Include Nodejs' net module.
 const net = require('net');
 
@@ -21,6 +22,6 @@ const server = net.createServer((connection) => {
 
 // The server listens to a socket for a client to make a connection request.
 // Think of a socket as an end point.
-server.listen(9898, () => {
+server.listen(port, () => {
     console.log('server is listening');
 });

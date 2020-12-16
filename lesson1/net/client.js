@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const net = require('net');
 
 const port = 9898;
@@ -5,7 +6,7 @@ const port = 9898;
 // net.connect is alias to net.createConnection()
 // see https://nodejs.org/api/net.html#net_net_createconnection
 const client = net.connect({
-    port: port
+    port,
 }, () => {
     console.log('connected to server!');
 });
